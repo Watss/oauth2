@@ -295,7 +295,7 @@ class AuthorizationCodeGrant {
   Future<Client> _handleAuthorizationCode(String? authorizationCode) async {
     var startTime = DateTime.now();
 
-    var headers = <String, String>{};
+    var headers = <String, String>{'Origin': 'localhost'};
 
     var body = {
       'grant_type': 'authorization_code',
